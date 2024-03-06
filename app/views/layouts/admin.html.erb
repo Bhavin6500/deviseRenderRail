@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Devise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-indigo-600 py-4 mb-8">
+    <div class="container mx-auto">
+      <h1 class="text-white text-4xl font-bold">Admin Panel</h1>
+    </div>
+  </header>
+  <main class="container mx-auto px-5 flex flex-col items-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-4">Log in</h2>
+      <%= yield %>
+    </div>
+  </main>
+</body>
+</html>
